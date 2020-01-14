@@ -1,16 +1,3 @@
 <p>dashboard works!</p>
 
-<div class="angular-topics-list docs-component-category-list">
-  <a
-    *ngFor="let topic of topics"
-    class="docs-component-category-list-item"
-    class="docs-component-category-list-item"
-    [routerLink]="[topic.link]"
-    routerLinkActive="router-link-active"
-  >
-    <mat-card class="docs-component-category-list-card">
-      <mat-card-title>{{ topic.name }}</mat-card-title>
-      <mat-card-content class="docs-component-category-list-card-summary">{{ topic.description }}</mat-card-content>
-    </mat-card>
-  </a>
-</div>
+<app-topics-list [topics]="topics"></app-topics-list>
