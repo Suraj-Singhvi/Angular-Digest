@@ -13,6 +13,13 @@ const routes: Routes = [
       import('../parent-to-child-communication/parent-to-child-communication.module').then(
         m => m.ParentToChildCommunicationModule
       )
+  },
+  {
+    path: 'child-to-parent',
+    loadChildren: () =>
+      import('../child-to-parent-communication/child-to-parent-communication.module').then(
+        m => m.ChildToParentCommunicationModule
+      )
   }
 ];
 
