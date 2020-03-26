@@ -9,11 +9,41 @@
 <div class="parent-container">
   <mat-card>
     <mat-card-title>Parent Component</mat-card-title>
-    <mat-card-subtitle> Pass data from parent to child </mat-card-subtitle>
-    <mat-card-content
-      >Desc...................The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
-      Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for
-      hunting.
+    <mat-card-subtitle>how to pass data from parent to child </mat-card-subtitle>
+    <mat-card-content>
+      Use @Input decorators to share data from Parent to Child component.
+      <br />
+      <p>
+        @Input() decorator in a child component or directive to let Angular know that a property in that component can
+        receive its value from its parent component. It helps to remember that the data flow is from the perspective of
+        the child component. So an @Input() allows data to be input into the child component from the parent component.
+      </p>
+
+      References:
+      <a href="https://angular.io/guide/template-syntax#inputs-outputs">@Input Decorators</a>
+      <br />
+      <a href="https://angular.io/guide/component-interaction">Component Communication</a>
+
+      <pre>
+        sending values directly in html when passing data to child component
+        [nickName]="'GodFather'"
+        [age]="64"
+      </pre>
+
+      <pre>
+        When using  [(ngModel)] with input element, it is important to write  name="something" in the input element; 
+        otherwise you will get below error.
+        Error: If ngModel is used within a form tag, either the name attribute must be set or the form
+        control must be defined as 'standalone' in ngModelOptions.
+  
+        Significance of "name" attribute in HTML : https://stackoverflow.com/questions/26061651/what-is-the-purpose-of-the-html-name-attribute
+
+        https://developer.mozilla.org/en-US/docs/Web/API/Element/name
+
+        In an input element, the name attribute defines the name of the control. Only controls that have a name can be “successful”, i.e. may contribute to the form data set sent to a server. Thus, it is indispensable in order to make the value of the control submitted to server-side processing.
+  
+
+      </pre>
     </mat-card-content>
 
     <app-parent></app-parent>

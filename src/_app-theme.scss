@@ -4,7 +4,7 @@
 @import './app/shared/components/topics-list/_component-category-list-theme';
 
 // Styles for the docs app that are based on the current theme.
-@mixin app-root-theme($theme) {
+@mixin material-docs-app-theme($theme) {
   $primary: map-get($theme, primary);
   $accent: map-get($theme, accent);
   $warn: map-get($theme, warn);
