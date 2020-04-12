@@ -4,7 +4,6 @@
 
 .parent-container {
   padding: 20px;
-  border: 2px solid blue;
   max-width: 50%;
 
   mat-form-field {
@@ -14,5 +13,9 @@
   .parent-card {
     width: 50%;
     margin-bottom: 30px;
+  }
+
+  pre {
+    white-space: normal;
   }
 }

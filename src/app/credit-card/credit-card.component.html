@@ -12,16 +12,21 @@
       add 'credit-card' attribute which is a custom directive in an input element...that's it attributes are added in []
       brackets...hence, the selector for a directive is '[credit-card]'.
 
+      <br />
+
       <pre>
         when you create a custom directive you probably want to talk to particular DOM Node (in this case, input element) via the directive - use ElementRef in this case
-
+        <br>
+        <br>
         In a directive you cannot declare HTML template...rest everything you do in component is applicable here as well
 
-    </pre
-      >
+    </pre>
 
       <pre>
           THINGS TO TRY: https://hackernoon.com/create-reuseable-validation-directive-in-angualr-2-dcb0b0df2ce8
+
+          <br>
+          <br>
           How to add `mat-form-field-invalid` class(to show red underline) to mat-form-field from directive when error occurs
       </pre>
     </mat-card-content>
@@ -30,7 +35,7 @@
     <mat-card class="parent-card">
       <mat-label>Credit Card</mat-label>
       <mat-form-field class="example-full-width">
-        <input required matInput placeholder="Enter 16 digit credit card number" name="something" credit-card />
+        <input matInput placeholder="Enter 16 digit credit card number" name="something" credit-card />
       </mat-form-field>
     </mat-card>
 
