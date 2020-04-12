@@ -1,0 +1,18 @@
+.parent-container > mat-card {
+  background-color: antiquewhite;
+}
+
+.parent-container {
+  padding: 20px;
+  border: 2px solid blue;
+  max-width: 50%;
+
+  mat-form-field {
+    width: 100%;
+  }
+
+  .parent-card {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+}

@@ -21,6 +21,11 @@ export class DashboardComponent implements OnInit {
         name: 'Creating Dynamic Component',
         description: 'learn how to create dynamic components',
         link: 'dynamic-component'
+      },
+      {
+        name: 'Directives',
+        description: 'Examples for Directives',
+        link: 'custom-directive'
       }
     ];
   }

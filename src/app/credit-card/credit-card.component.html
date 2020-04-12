@@ -1,0 +1,27 @@
+<!-- <p>parent-to-child-communication works!</p>
+
+<app-parent></app-parent>
+
+<app-child></app-child> -->
+
+<div class="parent-container">
+  <mat-card>
+    <mat-card-title>Credit Card Component</mat-card-title>
+    <mat-card-subtitle>smart input box that understands credit card input</mat-card-subtitle>
+    <mat-card-content>
+      add 'credit-card' attribute which is a custom directive in an input element...that's it
+    </mat-card-content>
+
+    <mat-card class="parent-card">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Enter 16 digit credit card number" name="something" />
+      </mat-form-field>
+    </mat-card>
+
+    <!-- <mat-card-actions>
+        <button class="mat-button mat-button-base">Input Event</button>
+        <button class="mat-button mat-button-base">OutPut Event</button>
+      </mat-card-actions> -->
+    <mat-card-footer></mat-card-footer>
+  </mat-card>
+</div>
