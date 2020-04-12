@@ -1,0 +1,8 @@
+<div class="parent-card">
+  <mat-form-field class="example-full-width">
+    <input matInput placeholder="Favorite food" [(ngModel)]="parentMessage" />
+  </mat-form-field>
+  <div>
+    <app-child [childMessage]="parentMessage"> </app-child>
+  </div>
+</div>

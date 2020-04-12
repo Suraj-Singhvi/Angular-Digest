@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -17,6 +17,7 @@ import { Component, OnInit, Input } from '@angular/core';
   `
 })
 export class ChildComponent implements OnInit {
+  // getting value from parent to child
   @Input() childMessage;
   @Input() childObj;
   // tslint:disable-next-line: no-input-rename
