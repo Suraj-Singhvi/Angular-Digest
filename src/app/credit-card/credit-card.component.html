@@ -14,6 +14,22 @@
 
       <br />
 
+      Attribute directives: change the appearance or behavior of an element, component, or another directive.
+
+      <br />
+
+      use `exportAs` property of directive to expose directive to the template of a component using a template reference
+      assigned to exportAs prop you can then call fn of the directive.
+      <code>
+        <pre>
+          @Directive, exportAs: 'tooltip' // allow us to use it alongside TemplateRef in our
+          component 
+          In template, #myTooltip="tooltip"
+          <span (mouseover)="myTooltip.show()" (mouseout)="myTooltip.hide()"> (?)</span>
+      </pre>
+      </code>
+      <br />
+
       <pre>
         when you create a custom directive you probably want to talk to particular DOM Node (in this case, input element) via the directive - use ElementRef in this case
         <br>
@@ -34,8 +50,21 @@
     <!-- Credit Card example -->
     <mat-card class="parent-card">
       <mat-label>Credit Card</mat-label>
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Enter 16 digit credit card number" name="something" credit-card />
+      <mat-form-field class="full-width-form-field">
+        <input
+          matInput
+          placeholder="Enter 16 digit credit card number"
+          name="credit card number"
+          type="text"
+          credit-card
+        />
+      </mat-form-field>
+
+      <label tooltip="3 digit number, back of your card" #myTooltip="tooltip"
+        >Enter Security Code <span (mouseover)="myTooltip.show()" (mouseout)="myTooltip.hide()"> (?)</span></label
+      >
+      <mat-form-field class="full-width-form-field">
+        <input matInput placeholder="Enter cvv number" type="text" name="security code" />
       </mat-form-field>
     </mat-card>
 
