@@ -1,0 +1,24 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { StructuralDirectiveExampleComponent } from './structural-directive-example.component';
+
+describe('StructuralDirectiveExampleComponent', () => {
+  let component: StructuralDirectiveExampleComponent;
+  let fixture: ComponentFixture<StructuralDirectiveExampleComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [StructuralDirectiveExampleComponent]
+    }).compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(StructuralDirectiveExampleComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

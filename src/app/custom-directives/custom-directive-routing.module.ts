@@ -10,6 +10,11 @@ const routes: Routes = [
   {
     path: 'credit-card',
     loadChildren: () => import('../credit-card/credit-card.module').then(m => m.CreditCardModule)
+  },
+  {
+    path: 'structural-directive',
+    loadChildren: () =>
+      import('../structural-directive-example/structural-directive.module').then(m => m.StructuralDirectiveModule)
   }
 ];
 

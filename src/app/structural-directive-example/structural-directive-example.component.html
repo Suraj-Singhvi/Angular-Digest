@@ -1,0 +1,27 @@
+<br />
+A Custom directive desugar's into a template * => signifies we are using structural directive. let-item => an implicit
+context, although we can assign a value, we will not as we want it to be implicit
+<br />
+<br />
+
+<div class="">
+  <label>default ngFor</label>
+
+  <ul>
+    <li *ngFor="let item of items; let i = index">{{ i }} Person: {{ item.name | json }}</li>
+  </ul>
+
+  <label>ngFor de-suguared</label>
+  <ul>
+    <ng-template ngFor [ngForOf]="items" let-item let-i="index">
+      <li>{{ i }} Person: {{ item.name | json }}</li>
+    </ng-template>
+  </ul>
+
+  <label>My own implementation of ngFor -- myFor</label>
+  <ul>
+    <ng-template myFor [myForOf]="items" let-item let-i="index">
+      <li>{{ i }} Person: {{ item.name | json }}</li>
+    </ng-template>
+  </ul>
+</div>

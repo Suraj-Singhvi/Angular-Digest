@@ -23,6 +23,11 @@ export class CustomDirectiveComponent implements OnInit {
         name: 'Credit Card Directive',
         description: 'creating a custom credit card directive',
         link: 'credit-card'
+      },
+      {
+        name: 'Structural Directive',
+        description: 'learn how to create your own structural directive',
+        link: 'structural-directive'
       }
     ];
   }
