@@ -28,6 +28,11 @@ export class CustomDirectiveComponent implements OnInit {
         name: 'Structural Directive',
         description: 'learn how to create your own structural directive',
         link: 'structural-directive'
+      },
+      {
+        name: 'Basic Directive',
+        description: 'learn simple directive works',
+        link: 'simple-directive'
       }
     ];
   }

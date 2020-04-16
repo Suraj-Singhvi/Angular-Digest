@@ -15,6 +15,11 @@ const routes: Routes = [
     path: 'structural-directive',
     loadChildren: () =>
       import('../structural-directive-example/structural-directive.module').then(m => m.StructuralDirectiveModule)
+  },
+  {
+    path: 'simple-directive',
+    loadChildren: () =>
+      import('../basic-directive-examples/basic-directive-examples.module').then(m => m.BasicDirectivesExampleModule)
   }
 ];
 

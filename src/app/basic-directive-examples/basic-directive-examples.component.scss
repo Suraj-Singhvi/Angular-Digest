@@ -1,0 +1,10 @@
+.parent-container {
+  padding: 20px;
+  max-width: 50%;
+  background-color: tomato;
+
+  .example-card {
+    width: 50%;
+    background-color: darkcyan;
+  }
+}

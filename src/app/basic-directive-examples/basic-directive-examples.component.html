@@ -1,0 +1,45 @@
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title>#1. change the content of all html 'h' tags</mat-card-title>
+    <mat-card-subtitle> selector: 'h1, h3, [changeText]' </mat-card-subtitle>
+    <mat-card-content>
+      This directive is applied directly on the h1, h3 tag or any element having `changeText` attribute on it, changing
+      its innerHtml
+    </mat-card-content>
+    <mat-card class="example-card">
+      <h1>Simple h1 tag</h1>
+      <h2>Simple h2 tag</h2>
+      <h3>Simple h3 tag</h3>
+      <h4>Simple h4 tag</h4>
+      <h5 changeText>Simple h5 tag</h5>
+    </mat-card>
+  </mat-card>
+</div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title
+      >#2. Change the message passed from parent to child with a Directive using @Input decorator</mat-card-title
+    >
+    <mat-card-subtitle> selector: '[first], [second]' </mat-card-subtitle>
+    <mat-card-content>
+      When we pass data from Parent to child like this: "app-child [first]="'another message from parent to its child'"
+      app-child".... [first] then to change its content by directive @Input() first needs to be written in Directive
+      else console error will be thrown
+    </mat-card-content>
+    <mat-card class="example-card">
+      <app-dummy-parent></app-dummy-parent>
+    </mat-card>
+  </mat-card>
+</div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title>#3. Binding event listner</mat-card-title>
+    <mat-card-subtitle> selector: '[second]' </mat-card-subtitle>
+    <mat-card-content> </mat-card-content>
+    <mat-card class="example-card">
+      <app-child [second]="'When this text is clicked...clicks are logged in console'"></app-child>
+    </mat-card>
+  </mat-card>
+</div>
