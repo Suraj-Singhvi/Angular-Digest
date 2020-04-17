@@ -35,11 +35,42 @@
 
 <div>
   <mat-card class="parent-container">
-    <mat-card-title>#3. Binding event listner</mat-card-title>
+    <mat-card-title>#3. Binding event listener</mat-card-title>
     <mat-card-subtitle> selector: '[second]' </mat-card-subtitle>
     <mat-card-content> </mat-card-content>
     <mat-card class="example-card">
       <app-child [second]="'When this text is clicked...clicks are logged in console'"></app-child>
+    </mat-card>
+  </mat-card>
+</div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title>#4. Building a directive that tracks user events in directive</mat-card-title>
+    <mat-card-subtitle> selector: '[track]' </mat-card-subtitle>
+    <mat-card-content> </mat-card-content>
+    <mat-card class="example-card">
+      <button [track]="'First button'">First</button>
+      <button [track]="'Second button'">Second</button>
+      <button [track]="'Third button'">Third</button>
+    </mat-card>
+  </mat-card>
+</div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title
+      >#5. A directive that interacts with service & HostBinding & applying class based on service</mat-card-title
+    >
+    <mat-card-subtitle> selector: '[online]' </mat-card-subtitle>
+    <mat-card-content>
+      where ever this online directive is applied based on the service status of online property...the directive will
+      add offline class & disabled attribute on the HTML element</mat-card-content
+    >
+    <mat-card class="example-card">
+      <button online [track]="'First button'">First</button>
+      <button [track]="'Second button'">Second</button>
+      <button [track]="'Third button'">Third</button>
     </mat-card>
   </mat-card>
 </div>

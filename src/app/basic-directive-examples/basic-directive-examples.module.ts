@@ -5,6 +5,7 @@ import { SimpleDirective, AnotherSimpleDirective } from './directives/simple.dir
 import { RouterModule, Routes } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { DummyParentComponent, DummyChildComponent } from './dummy-component/dummy.component';
+import { TrackingDirective } from './directives/track.directive';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
   declarations: [
     BasicDirectiveExamplesComponent,
     SimpleDirective,
+    TrackingDirective,
     AnotherSimpleDirective,
     DummyParentComponent,
     DummyChildComponent
