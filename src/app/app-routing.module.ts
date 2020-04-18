@@ -20,6 +20,10 @@ const routes: Routes = [
       import('./component-communication/component-communication.module').then(m => m.ComponentCommunicationModule)
   },
   {
+    path: 'dynamic-component',
+    loadChildren: () => import('./advance-component-examples/advance-comp.module').then(m => m.AdvanceComponentModule)
+  },
+  {
     path: 'custom-directive',
     loadChildren: () => import('./custom-directives/custom-directive.module').then(m => m.CustomDirectiveModule)
   }

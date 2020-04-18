@@ -1,0 +1,30 @@
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title>#1. Using ng-template elements in Angular 2</mat-card-title>
+    <mat-card-subtitle> </mat-card-subtitle>
+    <mat-card-content>
+      Content of templates are not rendered on its own directly
+      <br />
+      Content written in ng-template are rendered as it is ...they are not wrapped in ng-template tag in DOM.
+      <br />
+      to show content of ng-template we need to use a template ref & then use ViewChild to query and get reference to
+      the template & then embed the template using ViewContainerRef
+    </mat-card-content>
+    <mat-card class="example-card">
+      <app-ng-template></app-ng-template>
+    </mat-card>
+  </mat-card>
+</div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title>#2. Create elements from ng-template with ngTemplateOutlet</mat-card-title>
+    <mat-card-subtitle> </mat-card-subtitle>
+    <mat-card-content>
+      <br />
+    </mat-card-content>
+    <mat-card class="example-card">
+      <app-ng-template-2></app-ng-template-2>
+    </mat-card>
+  </mat-card>
+</div>

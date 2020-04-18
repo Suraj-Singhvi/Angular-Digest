@@ -6,6 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./basic-directive-examples.component.scss']
 })
 export class BasicDirectiveExamplesComponent implements OnInit {
+  messages = {
+    one: 'message one',
+    two: 'message two',
+    third: 'message third'
+  };
   constructor() {}
 
   ngOnInit() {}

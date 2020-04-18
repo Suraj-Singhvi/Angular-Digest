@@ -1,4 +1,13 @@
-import { Directive, HostBinding, Input, HostListener } from '@angular/core';
+import {
+  Directive,
+  HostBinding,
+  Input,
+  HostListener,
+  ElementRef,
+  ViewContainerRef,
+  TemplateRef,
+  AfterViewInit
+} from '@angular/core';
 
 @Directive({
   // selector: 'h1, h3, [changeText]'
@@ -38,4 +47,49 @@ export class AnotherSimpleDirective {
     // since the innerText is bound to the 'second' ..on clicking, in the event handler if i update the text here...inner text is updated
     this.second = 'clicked';
   }
+}
+
+@Directive({ selector: '[third]' })
+export class SimpleStructuralDirective implements AfterViewInit {
+  constructor(private el: ElementRef, private template: TemplateRef<any>, private view: ViewContainerRef) {
+    console.log(el.nativeElement);
+  }
+  ngAfterViewInit(): void {
+    this.view.createEmbeddedView(this.template);
+  }
+}
+
+@Directive({ selector: '[fourth]' })
+export class StructuralWithDataBindingDirective implements AfterViewInit {
+  @Input() set fourth(value) {
+    this.view.createEmbeddedView(this.template, {
+      $implicit: 'This is the value from the $implicit context'
+    });
+  }
+
+  constructor(private el: ElementRef, private template: TemplateRef<any>, private view: ViewContainerRef) {
+    console.log(el.nativeElement);
+  }
+  ngAfterViewInit(): void {}
+}
+
+@Directive({ selector: '[my][myFrom]' })
+export class MyFromDirective implements AfterViewInit {
+  // value of the input is destructured -
+  @Input() set myFrom({ one, two, three }) {
+    this.view.createEmbeddedView(this.template, {
+      $implicit: one
+    });
+    this.view.createEmbeddedView(this.template, {
+      $implicit: two
+    });
+    this.view.createEmbeddedView(this.template, {
+      $implicit: three
+    });
+  }
+
+  constructor(private el: ElementRef, private template: TemplateRef<any>, private view: ViewContainerRef) {
+    console.log(el.nativeElement);
+  }
+  ngAfterViewInit(): void {}
 }

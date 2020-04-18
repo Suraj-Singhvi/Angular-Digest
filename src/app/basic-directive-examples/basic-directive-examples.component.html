@@ -74,3 +74,78 @@
     </mat-card>
   </mat-card>
 </div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title>#6. Simple structural directive</mat-card-title>
+    <mat-card-subtitle> selector: '[third]' </mat-card-subtitle>
+    <mat-card-content> * wraps are element inside the ng-template</mat-card-content>
+    <mat-card class="example-card">
+      <!-- this is simple directive..it works..but since templateRef is injected in constructor of the directive for ex.2 & 3 it will give error ..since commented -->
+      <!-- <div third>Hi there 1</div> -->
+
+      <div *third>Hi there 2</div>
+
+      <!-- *third when de-structured...looks like below ex...with ng-template -->
+      <ng-template third>
+        <div>Hi there 3</div>
+      </ng-template>
+    </mat-card>
+  </mat-card>
+</div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title>#7. Simple structural directive data binding with context</mat-card-title>
+    <mat-card-subtitle> selector: '[fourth]' </mat-card-subtitle>
+    <mat-card-content> </mat-card-content>
+    <mat-card class="example-card">
+      <div *fourth="let message">{{ message }}</div>
+
+      <!-- *fourth="let message" when de-structured...looks like below ex...with <ng-template fourth let-message> </ng-template>-->
+      <ng-template fourth let-message>
+        <div>*fourth directive when de-sugared{{ message }}</div>
+      </ng-template>
+    </mat-card>
+  </mat-card>
+</div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title>#8. Simple structural directive data binding with dynamic context</mat-card-title>
+    <mat-card-subtitle> selector: '[my]' </mat-card-subtitle>
+    <mat-card-content> * wraps are element inside the ng-template</mat-card-content>
+    <mat-card class="example-card">
+      <div *my="let message; from: messages">{{ message }}</div>
+
+      <hr />
+      <!-- *fourth="let message" when de-structured...looks like below ex...with <ng-template fourth let-message> </ng-template>-->
+      <ng-template my [myFrom]="messages" let-message>
+        <div>my directive when de-sugared : {{ message }}</div>
+      </ng-template>
+    </mat-card>
+  </mat-card>
+</div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title>#9. Create a template storage service</mat-card-title>
+    <mat-card-subtitle> selector: '[surround]' </mat-card-subtitle>
+    <mat-card-content>
+      app-template-storage is a component with templates that are set in a service...Now whenever our directive is
+      applied we are getting the template from the service and embedding around the template
+    </mat-card-content>
+    <mat-card class="example-card">
+      <app-template-storage></app-template-storage>
+      <div>
+        <button *surround>First</button>
+      </div>
+      <div>
+        <button>Second</button>
+      </div>
+      <div>
+        <button>Third</button>
+      </div>
+    </mat-card>
+  </mat-card>
+</div>
