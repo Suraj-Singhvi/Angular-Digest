@@ -28,3 +28,45 @@
     </mat-card>
   </mat-card>
 </div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title>#3. Content Projection - < ng-content > </mat-card-title>
+    <mat-card-subtitle>
+      it allows us to inject content somewhere else...... by default ng-content will replace all the content passed to
+      it in one slot.
+    </mat-card-subtitle>
+    <mat-card-content>
+      In this example, h3 tag is injected into the auth-form in place of the ng-content tag
+      <br />
+    </mat-card-content>
+    <mat-card class="example-card">
+      <app-content-projection-example-1></app-content-projection-example-1>
+    </mat-card>
+  </mat-card>
+</div>
+
+<div>
+  <mat-card class="parent-container">
+    <mat-card-title
+      >#3. Content Projection - < ng-content > with multiple DOM elements in different location in the DOM
+    </mat-card-title>
+    <mat-card-subtitle>
+      it allows us to inject content somewhere else...... by default ng-content will replace all the content passed to
+      it in one slot.
+    </mat-card-subtitle>
+    <mat-card-content>
+      In this example, h3 tag is injected into the auth-form in place of the ng-content tag
+      <br />
+      but if we want to inject multiple html element in different place to a component we need to explicitly specify
+      what element comes where using `select` like this--- `< ng-content select="h3"> select="#myId" select=".my-class"`
+      <br />
+      < ng-content select="my-component-selector">
+      <br />
+      you can also inject component it could be tag, id or classes
+    </mat-card-content>
+    <mat-card class="example-card">
+      <app-content-projection-example-2></app-content-projection-example-2>
+    </mat-card>
+  </mat-card>
+</div>

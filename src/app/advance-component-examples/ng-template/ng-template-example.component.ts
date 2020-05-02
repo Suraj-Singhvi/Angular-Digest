@@ -1,5 +1,6 @@
 import { Component, ViewChild, AfterContentInit, ViewContainerRef, TemplateRef } from '@angular/core';
 
+//#region `app-ng-template` simple ng-template example
 @Component({
   selector: 'app-ng-template',
   template: `
@@ -29,7 +30,9 @@ export class NgTemplateComponent implements AfterContentInit {
     // this.view.createEmbeddedView(this.template);
   }
 }
+//#endregion
 
+//#region ng-template with ngTempalteOutlet
 @Component({
   selector: 'app-ng-template-2',
   template: `
@@ -64,3 +67,4 @@ export class NgTemplate2Component {
 
   constructor() {}
 }
+//#endregion
